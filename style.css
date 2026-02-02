@@ -240,12 +240,11 @@ header {
 .donation-divider {
   text-align: center;
   font-style: italic;
-  font-size: 0.95rem;
-  color: #444;
+  font-size: 0.9rem;
+  color: #555;
   margin: 1.5rem 0;
-  font-weight: 600;
-  /* Semi-bold */
-  letter-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: normal;
 }
 
 .iban-highlight {
@@ -256,6 +255,14 @@ header {
   display: inline-block;
   padding-bottom: 2px;
   margin-bottom: 1rem !important;
+  transition: color 0.3s ease;
+}
+
+.iban-highlight:hover {
+  color: #ff9f43;
+  /* Orange accent */
+  cursor: pointer;
+  border-color: #ff9f43;
 }
 
 .highlight-text {

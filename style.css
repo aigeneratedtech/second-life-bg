@@ -243,6 +243,9 @@ header {
   font-size: 0.95rem;
   color: #444;
   margin: 1.5rem 0;
+  font-weight: 600;
+  /* Semi-bold */
+  letter-spacing: 1px;
 }
 
 .iban-highlight {

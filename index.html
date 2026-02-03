@@ -19,55 +19,73 @@
     <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <!-- Video Background -->
-    <video autoplay muted loop playsinline id="bg-video">
+<body class="bg-gradient-to-br from-gray-900 to-black text-gray-100 min-h-screen font-sans antialiased">
+    <!-- Video Background (Keep existing video but ensure z-index works with tailwind) -->
+    <video autoplay muted loop playsinline id="bg-video" class="fixed top-0 left-0 w-full h-full object-cover -z-20">
         <source src="images/background.mp4" type="video/mp4">
     </video>
-    <div class="video-overlay"></div>
+    <div class="video-overlay fixed top-0 left-0 w-full h-full bg-black/40 -z-10 pointer-events-none"></div>
 
     <!-- Header -->
-    <header>
-        <a href="#" class="logo-container">
-            <img src="images/logo.jpg" alt="Лого на Фондация Втори Живот" class="logo-img">
-            <span class="logo-text">Фондация "Втори Живот"</span>
+    <header
+        class="sticky top-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg px-8 py-4 flex justify-center items-center transition-all duration-300">
+        <a href="#" class="logo-container flex items-center gap-4 hover:scale-105 transition-transform duration-300">
+            <img src="images/logo.jpg" alt="Лого на Фондация Втори Живот" class="h-16 w-auto rounded-xl shadow-md">
+            <span
+                class="logo-text font-bold text-2xl text-white tracking-widest uppercase shadow-black drop-shadow-md">ВТОРИ
+                ЖИВОТ</span>
         </a>
     </header>
 
-    <!-- High-Impact Hero Section (Dashboard) -->
-    <section class="dashboard-hero">
-        <div class="dashboard-container">
-            <!-- Left Column: Facebook Feed -->
-            <div class="fb-widget">
+    <main class="container mx-auto px-4 py-12">
+        <!-- Dashboard Container (Hero + Donation) -->
+        <div
+            class="dashboard-container flex flex-col lg:flex-row justify-center items-stretch gap-12 max-w-7xl mx-auto">
+
+            <!-- Left Column: Facebook Widget -->
+            <div
+                class="fb-widget bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl overflow-hidden w-full lg:w-[360px] h-[400px] flex justify-center items-center hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
                 <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/vtori.jivot&tabs=timeline&width=340&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
-                    width="340" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsecond.life.foundation.bg&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowfullscreen="true"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
 
             <!-- Right Column: Donation Info -->
-            <div class="donation-info">
-                <h2 class="donate-title">ДАРИ СЕГА</h2>
+            <div
+                class="donation-info bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-10 flex flex-col justify-center items-center text-center w-full lg:max-w-lg min-h-[400px] hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
+                <h2 class="donate-title font-black text-4xl text-white mb-8 tracking-widest uppercase drop-shadow-lg">
+                    ДАРИ СЕГА</h2>
 
-                <div class="sms-section">
-                    <span class="phone-emoji">📱</span>
-                    <p>Изпрати SMS с текст <span class="highlight-text">DMS KOTETA</span> на <span
-                            class="highlight-text">17 777</span></p>
+                <div class="sms-section mb-10">
+                    <span class="phone-emoji text-5xl block mb-4 drop-shadow-md">📱</span>
+                    <p class="text-lg">Изпрати SMS с текст <span
+                            class="highlight-text font-extrabold text-orange-400 text-2xl px-1">DMS KOTETA</span> на
+                        <span class="highlight-text font-extrabold text-orange-400 text-2xl px-1">17 777</span>
+                    </p>
                 </div>
 
-                <p class="donation-divider">или банково плащане</p>
+                <p
+                    class="donation-divider text-center italic text-gray-300 text-base my-8 relative flex items-center justify-center before:content-[''] before:w-8 before:h-px before:bg-gray-400 before:mx-3 after:content-[''] after:w-8 after:h-px after:bg-gray-400 after:mx-3">
+                    или чрез банков превод</p>
 
-                <div class="bank-box">
-                    <p class="iban-highlight"><strong>IBAN:</strong> BG06BPBI88981031840201</p>
-                    <p><strong>Титуляр:</strong> Фондация Втори живот</p>
-                    <p><strong>BIC:</strong> BPBIBGSF</p>
-                    <p><strong>Банка:</strong> Postbank</p>
+                <div
+                    class="bank-box bg-white/20 border border-white/30 rounded-xl p-6 text-left text-base hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-inner">
+                    <p
+                        class="iban-highlight text-xl font-black text-white border-b-2 border-orange-400 inline-block pb-1 mb-4 tracking-wide hover:text-orange-400 hover:border-orange-400 hover:cursor-pointer transition-colors duration-300">
+                        <strong>IBAN:</strong> BG06BPBI88981031840201</p>
+                    <p class="mb-2"><strong class="text-orange-200">Титуляр:</strong> Фондация Втори живот</p>
+                    <p class="mb-2"><strong class="text-orange-200">BIC:</strong> BPBIBGSF</p>
+                    <p><strong class="text-orange-200">Банка:</strong> Postbank</p>
                 </div>
             </div>
         </div>
+    </main>
     </section>
 
     <div class="section-divider"></div>

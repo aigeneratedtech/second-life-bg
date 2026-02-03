@@ -39,11 +39,12 @@
     <!-- High-Impact Hero Section (Dashboard) -->
     <section class="dashboard-hero">
         <div class="dashboard-container">
-            <!-- Left Column: Facebook Feed -->
-            <div class="fb-widget">
+            <!-- Left Column: Facebook Widget -->
+            <div
+                class="fb-widget bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl overflow-hidden w-full lg:w-[360px] h-[500px] flex justify-center items-center p-5 hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
                 <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/vtori.jivot&tabs=timeline&width=340&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
-                    width="340" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsecond.life.foundation.bg&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowfullscreen="true"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
@@ -58,13 +59,19 @@
                             class="highlight-text">17 777</span></p>
                 </div>
 
-                <p class="donation-divider">или банково плащане</p>
+                <p
+                    class="donation-divider text-center font-semibold text-gray-400 text-sm tracking-wide uppercase my-8 relative flex items-center justify-center before:content-[''] before:w-8 before:h-px before:bg-gray-400 before:mx-3 after:content-[''] after:w-8 after:h-px after:bg-gray-400 after:mx-3">
+                    ИЛИ ЧРЕЗ БАНКОВ ПРЕВОД</p>
 
-                <div class="bank-box">
-                    <p class="iban-highlight"><strong>IBAN:</strong> BG06BPBI88981031840201</p>
-                    <p><strong>Титуляр:</strong> Фондация Втори живот</p>
-                    <p><strong>BIC:</strong> BPBIBGSF</p>
-                    <p><strong>Банка:</strong> Postbank</p>
+                <div
+                    class="bank-box bg-white/20 border border-white/30 rounded-xl p-6 text-left text-base hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-inner">
+                    <p
+                        class="iban-highlight text-xl font-black text-white border-b-2 border-orange-400 inline-block pb-1 mb-4 tracking-wide hover:text-orange-400 hover:border-orange-400 hover:cursor-pointer transition-colors duration-300">
+                        <strong>IBAN:</strong> BG06BPBI88981031840201
+                    </p>
+                    <p class="mb-2"><strong class="text-orange-200">Титуляр:</strong> Фондация Втори живот</p>
+                    <p class="mb-2"><strong class="text-orange-200">BIC:</strong> BPBIBGSF</p>
+                    <p><strong class="text-orange-200">Банка:</strong> Postbank</p>
                 </div>
             </div>
         </div>

@@ -167,14 +167,16 @@ header {
 
 /* Facebook Widget specifics */
 .fb-widget {
-  height: 400px;
-  /* Taller */
-  width: 360px;
-  /* Wider */
+  height: 500px;
+  /* Match iframe height */
+  width: 100%;
+  max-width: 360px;
+  /* Responsive width */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 /* Donation Info specifics */
@@ -257,6 +259,16 @@ header {
 .bank-box:hover {
   background-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.02);
+}
+
+.bank-row {
+  margin-bottom: 0.5rem;
+}
+
+.bank-label {
+  color: #e67e22;
+  /* Premium Orange */
+  margin-right: 0.5rem;
 }
 
 .iban-highlight {

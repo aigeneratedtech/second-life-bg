@@ -41,16 +41,17 @@
         <div class="dashboard-container">
             <!-- Left Column: Facebook Widget -->
             <div
-                class="fb-widget bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl overflow-hidden w-full lg:w-[360px] h-[500px] flex justify-center items-center p-5 hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
+                class="fb-widget bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl overflow-hidden w-full lg:w-[360px] h-[500px] flex justify-center items-center p-0 hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
                 <iframe
                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsecond.life.foundation.bg&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                    width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowfullscreen="true"
+                    width="100%" height="500" style="border:none;overflow:hidden;height:500px;" scrolling="no"
+                    frameborder="0" allowfullscreen="true"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
 
             <!-- Right Column: Donation Info -->
-            <div class="donation-info">
+            <div
+                class="donation-info bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-10 flex flex-col justify-center items-center text-center w-full lg:max-w-lg min-h-[500px] hover:-translate-y-1 hover:shadow-orange-500/20 transition-all duration-300">
                 <h2 class="donate-title">ДАРИ СЕГА</h2>
 
                 <div class="sms-section">
@@ -60,7 +61,7 @@
                 </div>
 
                 <p
-                    class="donation-divider text-center font-semibold text-gray-400 text-sm tracking-wide uppercase my-8 relative flex items-center justify-center before:content-[''] before:w-8 before:h-px before:bg-gray-400 before:mx-3 after:content-[''] after:w-8 after:h-px after:bg-gray-400 after:mx-3">
+                    class="donation-divider text-center font-semibold text-[#666] text-[0.9rem] tracking-[1px] uppercase my-8 relative flex items-center justify-center before:content-[''] before:w-8 before:h-px before:bg-gray-400 before:mx-3 after:content-[''] after:w-8 after:h-px after:bg-gray-400 after:mx-3">
                     ИЛИ ЧРЕЗ БАНКОВ ПРЕВОД</p>
 
                 <div
